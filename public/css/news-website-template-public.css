@@ -1,0 +1,447 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+ /*
+
+   This CSS is for the feature article page
+
+
+
+ */
+
+ .post-template-news-feature-article .wrap {
+   padding: 1.875rem 1.125rem;
+ }
+
+
+ /*===============================
+
+
+   Hero Image Section
+
+
+ ==================================*/
+ .post-template-news-feature-article .single-featured-image-header {
+   display: none;
+ }
+
+ .featured-news.top-section {
+   height: calc( 100vh - 155px);
+   position: relative;
+ }
+
+ .featured-news.top-section img {
+   height: calc( 100vh - 155px);
+   object-fit: cover;
+   width: 100%;
+ }
+
+ .article-intro {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   padding: 0 5% !important;
+ }
+
+ .article-intro p {
+   padding: 0 0 5% 0;
+ }
+
+ .article-intro h2 {
+   font-family: "Surveyor Text A", "Surveyor Text B";
+   font-style: normal;
+   font-weight: 500;
+   font-size: 1.875rem;
+   line-height: 120%;
+   color: white;
+   padding: 0 0 2%;
+ }
+
+ #page .article-intro .sub-heading {
+   font-family: "Gentona_Medium" !important;
+   color: white;
+   font-size: 1.25rem;
+   line-height: 120%;
+   padding: 0 0 3%;
+ }
+
+ #page .article-intro .byline-date {
+   font-family: "Gentona_BookItalic" !important;
+   line-height: 120%;
+   color: white;
+   padding: 0 0 5%;
+   font-size: 0.875rem;
+ }
+
+ .featured_caption {
+   display: none;
+ }
+
+ /*===============================
+
+   Body Content
+
+ ================================*/
+ #page .body-content p {
+   font-family: "Surveyor Text A", "Surveyor Text B" !important;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 1.125rem;
+   line-height: 140%;
+   color: #000;
+ }
+
+ .body-content > p:first-child::first-letter {
+   color: #002346;
+   float: left;
+   line-height: 100%;
+   font-weight: 600;
+   margin-top: 0rem;
+   font-size: 3rem;
+   padding-right: .4rem;
+ }
+
+ .post-template-news-feature-article #page blockquote,
+ .post-template-news-feature-article #page blockquote p {
+   padding: 0;
+   margin: 1.875rem 0;
+   font-family: "Quadon_BoldItalic",Arial,sans-serif !important;
+   color: #C2510A;
+   line-height: 140%;
+   font-size: 1.375rem;
+ }
+
+ .post-template-news-feature-article figure {
+   margin: 0;
+ }
+
+ .post-template-news-feature-article figcaption {
+     font-family: "Gentona_LightItalic" !important;
+     font-size: .75rem;
+     line-height: 131% !important;
+ }
+
+ .featured-news.top-section ~ figure img {
+     width: 100vw;
+     height: 100vw;
+     object-fit: cover;
+ }
+
+ /*===============================
+   Social Media Section
+ ==================================*/
+ h3.sharing-box-name {
+   font-family: "Gentona_BoldItalic";
+   text-transform: uppercase;
+   color: #C2510A;
+   text-align: center;
+ }
+
+ .wrap.share-buttons,
+ .wrap.support-link {
+     padding: 0 1.125rem !important;
+ }
+
+ h3.sharing-box-name i {
+   padding: 0 10px;
+ }
+
+ .share-button-wrapper button {
+   background: none;
+   border: none;
+   padding: 0;
+   display: flex;
+   align-items: center;
+ }
+
+ .share-button-wrapper {
+   display: flex;
+   justify-content: center;
+ }
+
+ .share-button-wrapper > p {
+     margin: .5rem .5rem 0;
+ }
+
+ .share-button-wrapper p {
+   padding: 0;
+ }
+
+ .share-button-wrapper i {
+   color: #004083;
+   font-size: 2.22rem;
+   border-radius: 4px;
+   margin-top: -6px;
+   width: 32px;
+   height: 32px;
+ }
+
+ i.fas.fa-link {
+   color: white;
+   background: #004083;
+   font-size: 1.5rem;
+   padding: 4px;
+   border-radius: 4px;
+   margin-top: -5px;
+ }
+
+ /*===============================
+
+
+   Support Section
+
+
+ ==================================*/
+
+ #page .support-text-container p {
+   font-family: "Gentona_BookItalic" !important;
+   font-size: 0.875rem;
+   line-height: 140%;
+   text-align: center;
+   margin: 3% 0;
+ }
+
+ #page a.give-button {
+   font-family: "Gentona_Bold" !important;
+   text-transform: uppercase;
+   font-size: 1rem;
+   line-height: 120%;
+   border: 1.5px solid #002346;
+   padding: .5rem;
+   transition: .3s;
+ }
+
+ a.give-button:hover {
+   background: #002346;
+   color: white !important;
+   transition: .3s;
+ }
+
+ /*===============================
+
+
+   Related Posts
+
+
+ ==================================*/
+ .relatedposts h3 {
+     font-family: "Gentona_Bold";
+     font-size: 1.375rem;
+     text-transform: uppercase;
+     color: #C2510A;
+ }
+
+ .relatedthumb h4 {
+   font-family: "Surveyor Text A", "Surveyor Text B";
+   font-style: normal;
+   font-weight: 500;
+   color: #002346;
+   font-size: 1.25rem;
+   line-height: 120%;
+   padding: 0;
+ }
+
+ #page .relatedthumb p {
+   font-family: "Gentona_Book" !important;
+   color: #414141;
+   font-size: 1rem;
+   line-height: 140%;
+   padding: 0;
+ }
+
+ .relatedthumb a {
+   display: flex;
+ }
+
+ .related-post-title-excerpt {
+   flex: 1 50%;
+   margin-left: 0.6rem;
+ }
+
+ .related-post-featured-image {
+   flex: 1 28%;
+   max-width: 165px;
+ }
+
+ .relatedthumb {
+   margin-bottom: 10%;
+ }
+ /*===============================
+
+
+   Media Queries
+
+
+ ==================================*/
+
+ @media (min-width: 768px){
+
+   .post-template-news-feature-article .wrap {
+     padding: 1.875rem 5.25rem;
+   }
+
+   /*===============================
+     Hero Image Section
+   ==================================*/
+   .article-intro h2 {
+     font-size: 2.875rem;
+     font-family: "Surveyor Display A", "Surveyor Display B";
+     font-style: normal;
+     font-weight: 500;
+     padding: 0 0 1.5%;
+   }
+
+   #page .article-intro .sub-heading {
+     font-size: 1.375rem;
+     padding: 0 0 1.5%;
+   }
+
+   #page .article-intro .byline-date {
+     font-size: 1rem;
+     font-family: "Gentona_LightItalic" !important;
+   }
+
+   #page .article-intro .byline-date {
+     padding: 0 0 15%;
+   }
+
+   /*===============================
+     Body Content
+   ==================================*/
+   .body-content > p:first-child::first-letter {
+     font-size: 7rem;
+     margin-top: -20px;
+   }
+
+   .featured_caption {
+     color: white;
+     font-family: "Gentona_bookItalic";
+     font-size: .75rem;
+     margin-bottom: 6%;
+     display: block;
+   }
+
+   .post-template-news-feature-article #page blockquote,
+   .post-template-news-feature-article #page blockquote p {
+     font-family: "Quadon_UltraBoldItalic",Arial,sans-serif !important;
+   }
+
+   .featured-news.top-section ~ figure img {
+     width: 100vw;
+     height: initial;
+     object-fit: cover;
+   }
+
+   /*===============================
+     Support Section
+   ==================================*/
+
+   #page .support-text-container p {
+     font-size: 1rem;
+     margin: 1.8% 0;
+   }
+
+   /*===============================
+     Support Section
+   ==================================*/
+   h3.sharing-box-name {
+     font-family: "Gentona_BoldItalic";
+     text-transform: uppercase;
+     color: #C2510A;
+     text-align: center;
+   }
+
+   /*===============================
+     Related Posts
+   ==================================*/
+   .relatedposts-container {
+     display: flex;
+   }
+
+   .relatedthumb {
+     flex: 1 33%;
+   }
+
+   .relatedthumb a {
+     flex-wrap: wrap;
+   }
+
+   .related-post-featured-image {
+     flex: 1 100%;
+     max-width: 100%;
+   }
+
+   .related-post-title-excerpt {
+     margin-left: 0;
+     flex: 1 100%;
+     max-width: 68%;
+   }
+
+   .related-post-title-excerpt h4 {
+     margin: 4.1% 0;
+     font-size: 1.375rem;
+   }
+ }
+
+ @media (min-width: 1025px){
+   /*===============================
+     Hero Image Section
+   ==================================*/
+   .article-intro {
+     max-width: 78%;
+     margin: 0 auto;
+     left: 0;
+     right: 0;
+   }
+
+   #page .article-intro .sub-heading {
+     font-size: 1.625rem;
+   }
+
+   #page .article-intro .byline-date {
+     padding: 0 0 5%;
+   }
+
+   /*===============================
+     Body Content
+   ==================================*/
+
+   .featured_caption {
+     margin-bottom: 3%;
+   }
+
+   .post-template-news-feature-article figure {
+     margin: 0 auto;
+     max-width: 1025px;
+   }
+
+   .post-template-news-feature-article #page blockquote,
+   .post-template-news-feature-article #page blockquote p {
+     font-size: 1.5rem;
+   }
+
+   /*===============================
+     Related Posts
+   ==================================*/
+   .related-post-featured-image img {
+     width: 200px;
+   }
+
+   .related-post-title-excerpt h4 {
+     font-size: 1.5rem;
+   }
+
+   #page .relatedthumb p {
+     font-size: 1.125rem;
+   }
+
+   .relatedthumb a {
+     max-width: 87%;
+   }
+
+   .related-post-title-excerpt {
+     max-width: 100%;
+   }
+ }
