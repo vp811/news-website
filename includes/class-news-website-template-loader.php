@@ -412,3 +412,26 @@ if( function_exists('acf_add_local_field_group') ):
 		<?php
 	}
 
+/*========================================
+
+	Support Department Link/Text
+
+=========================================*/
+function supportText(){
+	//Gets the values entered in the Advanced Custom Fields in the post
+	$supportLink = get_field( "support_Link" );
+	$supportText = get_field( "support_Text" );
+
+	//If both values are empty, this will not display
+	if(!empty($supportLink) && !empty($supportText)){	?>
+		<div class="wrap support-link">
+			<section class="support-text-container">
+				<p>To further support this initiative and research of the college go to the link below.</p>
+				<p><a class="give-button" href="<?php echo $supportLink; ?>" target="_blank"><?php echo $supportText; ?></a></p>
+				<?php
+					}
+				?>
+			</section>
+		</div>
+
+<?php }
