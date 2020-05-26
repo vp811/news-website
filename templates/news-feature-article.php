@@ -56,6 +56,9 @@
 
         //Displays the support text and button
         supportText();
+
+        //Displays the related posts
+        relatedPosts();
       ?>
     </main><!-- #main -->
   </div><!-- #primary -->
