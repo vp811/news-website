@@ -53,6 +53,9 @@
 
         //Display Share Buttons
         socialMedia();
+
+        //Displays the support text and button
+        supportText();
       ?>
     </main><!-- #main -->
   </div><!-- #primary -->
