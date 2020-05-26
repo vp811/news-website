@@ -289,3 +289,71 @@ class clasNewsPageTemplates {
 }
 add_action( 'plugins_loaded', array( 'clasNewsPageTemplates', 'get_instance' ) );
 
+
+/*========================================
+
+Sets up ACF fields
+
+=========================================*/
+if( function_exists('acf_add_local_field_group') ):
+
+	//Adds the Subheading section to a post
+	acf_add_local_field_group(array(
+		'key' => 'subheading',
+		'title' => 'Sub Heading',
+		'fields' => array (
+			array (
+				'key' => 'subheading',
+				'label' => 'Sub Heading',
+				'instructions' => 'Enter the sub-head for this article.',
+				'name' => 'sub_heading',
+				'type' => 'text',
+			)
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+				),
+			),
+		),
+		'position' => 'acf_after_title',
+		'style' => 'seamless',
+	));
+
+	//Adds the Support section to a post
+	acf_add_local_field_group(array(
+		'key' => 'support_link',
+		'title' => 'Support Link',
+		'fields' => array (
+			array (
+				'key' => 'support_Link',
+				'label' => 'Support Link',
+				'instructions' => 'Paste link to giving page for department/center.',
+				'name' => 'support_link',
+				'type' => 'text',
+			),
+			array (
+				'key' => 'support_Text',
+				'label' => 'Support Text',
+				'instructions' => 'Type in the message that you would like to show up in the button.',
+				'name' => 'support_Text',
+				'type' => 'text',
+			)
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+				),
+			),
+		),
+		'position' => 'acf_after_title',
+		'style' => 'seamless',
+	));
+
+	endif;
