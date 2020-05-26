@@ -49,6 +49,10 @@
           </div>
         <?php }
       }
+
+
+        //Display Share Buttons
+        socialMedia();
       ?>
     </main><!-- #main -->
   </div><!-- #primary -->
