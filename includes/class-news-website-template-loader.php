@@ -199,6 +199,7 @@ class clasNewsPageTemplates {
 		$this->templates = array(
 			'../templates/news-article.php' => 'News Article',
 			'../templates/news-feature-article.php' => 'News Feature Article',
+			'../templates/news-home-page.php' => 'News Home Page'
 		);
 
 	}
