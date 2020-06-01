@@ -178,6 +178,10 @@ class clasNewsPageTemplates {
 				'theme_post_templates', array( $this, 'add_new_template' )
 			);
 
+			add_filter(
+				'theme_page_templates', array( $this, 'add_new_template' )
+			);
+
 		}
 
 		// Add a filter to the save post to inject out template into the page cache
@@ -389,7 +393,7 @@ if( function_exists('acf_add_local_field_group') ):
 								$args=array(
 								'tag__in' => $tag_ids,
 								'post__not_in' => array($post->ID),
-								'posts_per_page'=>4, // Number of related posts to display.
+								'posts_per_page'=>3, // Number of related posts to display.
 								'ignore_sticky_posts'=>1
 							);
 
