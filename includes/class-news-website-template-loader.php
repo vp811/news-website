@@ -394,7 +394,8 @@ if( function_exists('acf_add_local_field_group') ):
 								'tag__in' => $tag_ids,
 								'post__not_in' => array($post->ID),
 								'posts_per_page'=>3, // Number of related posts to display.
-								'ignore_sticky_posts'=>1
+								'ignore_sticky_posts'=>1,
+								'orderby' => 'rand',
 							);
 
 							$my_query = new wp_query( $args );
