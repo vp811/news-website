@@ -57,6 +57,8 @@
         //Displays the support text and button
         supportText();
 
+        echo "<hr />";
+
         //Displays the related posts
         relatedPosts();
       ?>
