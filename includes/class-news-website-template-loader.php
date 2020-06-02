@@ -468,9 +468,6 @@ function socialMedia(){
 
 			/* Copy the text inside the text field */
 			document.execCommand("copy");
-
-			/* Alert the copied text */
-			alert("Copied the text: " + copyText.value);
 		}
 	</script>
 	<div class="wrap share-buttons">
@@ -482,6 +479,9 @@ function socialMedia(){
 
 						<!-- Twitter Link -->
 						<p><a target="_blank" class="share-button share-twitter" href="https://twitter.com/intent/tweet?url=<?php echo $postUrl; ?>&text=<?php echo the_title(); ?>&via=<?php the_author_meta( 'twitter' ); ?>" title="Share on Twitter"><i class="fab fa-twitter-square"></i></i></a></p>
+
+						<!-- LinkedIn -->
+						<p><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>"><i class="fab fa-linkedin"></i></a></p>
 
 						<!-- Copy Link -->
 						<p><input type="text" value="<?php echo $postUrl; ?>" id="myInput" style="position: absolute; top:-99999999999px; left:-99999999999px;">
