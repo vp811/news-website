@@ -475,10 +475,10 @@ function supportText(){
 =========================================*/
 function socialMedia(){
 	$postUrl = get_the_permalink(); ?>
-	<script type="text/javascript">
-		function myFunction() {
+	<!-- <script type="text/javascript">
+		function copyLink() {
 			/* Get the text field */
-			var copyText = document.getElementById("myInput");
+			var copyText = document.getElementById("copyLink");
 
 			/* Select the text field */
 			copyText.select();
@@ -487,7 +487,7 @@ function socialMedia(){
 			/* Copy the text inside the text field */
 			document.execCommand("copy");
 		}
-	</script>
+	</script> -->
 	<div class="wrap share-buttons">
 		<section class="sharing-box content-margin content-background clearfix">
 				<h3 class="sharing-box-name"><i class="fa fa-share-alt" aria-hidden="true"></i>Share The Story<i class="fa fa-share-alt fa-rotate-180" aria-hidden="true"></i></h3>
@@ -499,11 +499,11 @@ function socialMedia(){
 						<p><a target="_blank" class="share-button share-twitter" href="https://twitter.com/intent/tweet?url=<?php echo $postUrl; ?>&text=<?php echo the_title(); ?>&via=<?php the_author_meta( 'twitter' ); ?>" title="Share on Twitter"><i class="fab fa-twitter-square"></i></i></a></p>
 
 						<!-- LinkedIn -->
-						<p><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>"><i class="fab fa-linkedin"></i></a></p>
+						<p><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $postUrl; ?>&title=<?php echo get_the_title(); ?>"><i class="fab fa-linkedin"></i></a></p>
 
 						<!-- Copy Link -->
-						<p><input type="text" value="<?php echo $postUrl; ?>" id="myInput" style="position: absolute; top:-99999999999px; left:-99999999999px;">
-						<button onclick="myFunction();" title="Copy Link"><i class="fas fa-link"></i></button></p>
+						<!-- <p><input type="text" value="<?php //echo $postUrl; ?>" id="copyLink" />
+						<button onclick="copyLink();" title="Copy Link"><i class="fas fa-link"></i></button></p> -->
 				</div>
 		</section>
 	</div><!-- Wrap -->
