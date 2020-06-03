@@ -64,7 +64,7 @@
  }
 
  .article-intro h2 {
-   font-family: "Surveyor Text A", "Surveyor Text B";
+   font-family: "Surveyor Text A", "Surveyor Text B", serif;
    font-style: normal;
    font-weight: 500;
    font-size: 1.875rem;
@@ -74,7 +74,7 @@
  }
 
  #page .article-intro .sub-heading {
-   font-family: "Gentona_Medium" !important;
+   font-family: "Gentona_Medium", sans-serif !important;
    color: white;
    font-size: 1.25rem;
    line-height: 120%;
@@ -82,7 +82,7 @@
  }
 
  #page .article-intro .byline-date {
-   font-family: "Gentona_BookItalic" !important;
+   font-family: "Gentona_BookItalic", sans-serif !important;
    line-height: 120%;
    color: white;
    padding: 0 0 .75rem;
@@ -99,7 +99,7 @@
 
  ================================*/
  #page .body-content p {
-   font-family: "Surveyor Text A", "Surveyor Text B" !important;
+   font-family: "Surveyor Text A", "Surveyor Text B", serif !important;
    font-style: normal;
    font-weight: 400;
    font-size: 1.125rem;
@@ -132,7 +132,7 @@
  }
 
  .post-template-news-feature-article figcaption {
-     font-family: "Gentona_LightItalic" !important;
+     font-family: "Gentona_LightItalic", sans-serif !important;
      font-size: .75rem;
      line-height: 131% !important;
  }
@@ -147,10 +147,12 @@
    Social Media Section
  ==================================*/
  h3.sharing-box-name {
-   font-family: "Gentona_BoldItalic";
+   font-family: "Gentona_BoldItalic", sans-serif;
    text-transform: uppercase;
    color: #C2510A;
    text-align: center;
+   font-size: 1rem;
+   padding-bottom: .875rem;
  }
 
  .wrap.share-buttons,
@@ -176,7 +178,7 @@
  }
 
  .share-button-wrapper > p {
-     margin: .5rem .5rem 0;
+     margin: .5rem .75rem 0;
  }
 
  .share-button-wrapper p {
@@ -188,9 +190,13 @@
    font-size: 2.22rem;
    border-radius: 4px;
    margin-top: -6px;
-   width: 32px;
-   height: 32px;
+   width: 25px;
+   height: 25px;
    transition: .3s;
+ }
+
+ .share-button-wrapper i:before {
+   font-size: 2rem;
  }
 
  i.fas.fa-link {
@@ -226,7 +232,7 @@
  ==================================*/
 
  #page .support-text-container p {
-   font-family: "Gentona_BookItalic" !important;
+   font-family: "Gentona_BookItalic", sans-serif !important;
    font-size: 0.875rem;
    line-height: 140%;
    text-align: center;
@@ -234,7 +240,7 @@
  }
 
  #page a.give-button {
-   font-family: "Gentona_Bold" !important;
+   font-family: "Gentona_Bold", sans-serif !important;
    text-transform: uppercase;
    font-size: 1rem;
    line-height: 120%;
@@ -261,14 +267,15 @@
  }
 
  .relatedposts h3 {
-   font-family: "Gentona_Bold";
+   font-family: "Gentona_Bold", sans-serif;
    font-size: 1.375rem;
    text-transform: uppercase;
    color: #C2510A;
+   text-align: center;
  }
 
  .relatedthumb h4 {
-   font-family: "Surveyor Text A", "Surveyor Text B";
+   font-family: "Surveyor Text A", "Surveyor Text B", serif;
    font-style: normal;
    font-weight: 500;
    color: #002346;
@@ -278,7 +285,7 @@
  }
 
  #page .relatedthumb p {
-   font-family: "Gentona_Book" !important;
+   font-family: "Gentona_Book", sans-serif !important;
    color: #414141;
    font-size: 1rem;
    line-height: 140%;
@@ -325,7 +332,7 @@
    ==================================*/
    .article-intro h2 {
      font-size: 2.875rem;
-     font-family: "Surveyor Display A", "Surveyor Display B";
+     font-family: "Surveyor Display A", "Surveyor Display B", serif;
      font-style: normal;
      font-weight: 500;
      padding: 0 0 .625rem;
@@ -338,7 +345,7 @@
 
    #page .article-intro .byline-date {
      font-size: 1rem;
-     font-family: "Gentona_LightItalic" !important;
+     font-family: "Gentona_LightItalic", sans-serif !important;
    }
 
    #page .article-intro .byline-date {
@@ -355,7 +362,7 @@
 
    .featured_caption {
      color: white;
-     font-family: "Gentona_bookItalic";
+     font-family: "Gentona_bookItalic", sans-serif;
      font-size: .75rem;
      margin-bottom: 2.625rem;
      display: block;
@@ -385,15 +392,17 @@
      Support Section
    ==================================*/
    h3.sharing-box-name {
-     font-family: "Gentona_BoldItalic";
-     text-transform: uppercase;
-     color: #C2510A;
-     text-align: center;
+       font-size: 1.25rem;
+       line-height: 120%;
    }
 
    /*===============================
      Related Posts
    ==================================*/
+   .relatedposts h3 {
+    font-size: 1.5rem;
+   }
+
    .wrap.related-posts {
      padding: 0 5.25rem;
    }
@@ -476,6 +485,10 @@
    /*===============================
      Related Posts
    ==================================*/
+   .relatedposts h3 {
+    font-size: 1.625rem;
+    line-height: 120%;
+  }
 
    .related-post-featured-image img {
      width: 200px;

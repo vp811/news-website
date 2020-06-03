@@ -8,7 +8,7 @@
  }
 
  h2.news-h2 {
-   font-family: 'Gentona_Bold';
+   font-family: 'Gentona_Bold', sans-serif;
    color: #C2510A;
    font-size: 1.375rem;
    line-height: 120%;
@@ -51,7 +51,7 @@
  }
 
  #page .news-excerpt p, #page p.news-p, #page p.researchnews-p, #page p.ytoriexcerpt-p {
-   font-family: "Gentona_Book" !important;
+   font-family: "Gentona_Book", sans-serif !important;
    color: #414141;
    font-size: 1rem;
    line-height: 140%;
