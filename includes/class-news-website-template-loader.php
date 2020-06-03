@@ -324,7 +324,7 @@ class thumbnailImages {
 Sets up ACF fields
 
 =========================================*/
-if( function_exists('acf_add_local_field_group') ):
+if(function_exists('acf_add_local_field_group')){
 
 	//Adds the Subheading section to a post
 	acf_add_local_field_group(array(
@@ -384,8 +384,7 @@ if( function_exists('acf_add_local_field_group') ):
 		'position' => 'acf_after_title',
 		'style' => 'seamless',
 	));
-
-	endif;
+}
 
 /*========================================
 
@@ -396,7 +395,7 @@ if( function_exists('acf_add_local_field_group') ):
 		?>
 		<div class="wrap related-posts">
 			<section class="relatedposts">
-				<h3>Related posts</h3>
+				<h3>You Might Also Like</h3>
 				<div class="relatedposts-container">
 					<?php
 						global $post;
@@ -405,14 +404,17 @@ if( function_exists('acf_add_local_field_group') ):
 						//Gets arguments for Related Posts Query
 						if ($tags) {
 							$tag_ids = array();
-							foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+							foreach($tags as $individual_tag){
+								$tag_ids[] = $individual_tag->term_id;
+
 								$args=array(
-								'tag__in' => $tag_ids,
-								'post__not_in' => array($post->ID),
-								'posts_per_page'=>3, // Number of related posts to display.
-								'ignore_sticky_posts'=>1,
-								'orderby' => 'rand',
-							);
+									'tag__in' => $tag_ids,
+									'post__not_in' => array($post->ID),
+									'posts_per_page'=>3, // Number of related posts to display.
+									'ignore_sticky_posts'=>1,
+									'orderby' => 'rand'
+								);
+							}
 
 							$my_query = new wp_query( $args );
 
@@ -421,7 +423,7 @@ if( function_exists('acf_add_local_field_group') ):
 							?>
 
 							<div class="relatedthumb">
-								<a rel="external" href="<? the_permalink()?>">
+								<a rel="external" href="<?php the_permalink(); ?>">
 								<div class="related-post-featured-image">
 									<?php the_post_thumbnail('thumbnail'); ?>
 								</div>
@@ -432,7 +434,7 @@ if( function_exists('acf_add_local_field_group') ):
 								</a>
 							</div>
 
-							<? }
+						<?php }
 						}
 						wp_reset_query();
 						?>
