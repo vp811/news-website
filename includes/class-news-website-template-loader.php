@@ -305,6 +305,22 @@ add_action( 'plugins_loaded', array( 'clasNewsPageTemplates', 'get_instance' ) )
 
 /*========================================
 
+Resizes Thumbnail Sizes
+
+=========================================*/
+class thumbnailImages {
+    public function __construct() {
+        add_action( 'after_setup_theme', array( $this, 'overwrite_wptheme_settings' ) );
+    }
+
+    public function overwrite_wptheme_settings() {
+        add_image_size( 'thumbnail', 150, 150, false );
+    }
+}
+
+
+/*========================================
+
 Sets up ACF fields
 
 =========================================*/
