@@ -61,10 +61,6 @@
    padding: 0;
  }
 
- #page p.news-p, #page p.researchnews-p {
-   margin:;
- }
-
  h3.news-h3, h3.researchnews-h3 {
    padding: 0;
  }
@@ -234,7 +230,7 @@
    }
 
    #page .news-excerpt p, #page p.news-p, #page p.researchnews-p {
-     font-size: 1.125rem;
+     font-size: 1.0625rem;
    }
 
    .featured-section {
