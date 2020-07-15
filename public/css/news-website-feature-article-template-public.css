@@ -135,6 +135,14 @@
    font-size: 1.375rem;
  }
 
+ .post-template-news-feature-article blockquote p:first-of-type:before {
+    content: "“";
+}
+
+ .post-template-news-feature-article blockquote p:first-of-type:after {
+    content: "”";
+ }
+
  .post-template-news-feature-article figure {
    margin: 0;
  }

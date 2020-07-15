@@ -103,6 +103,14 @@
    font-size: 1.375rem;
  }
 
+ .post-template-news-article blockquote p:first-of-type:before {
+    content: "“";
+}
+
+ .post-template-news-article blockquote p:first-of-type:after {
+    content: "”";
+ }
+
  .post-template-news-article figure {
     margin: 0 0 1.8775rem;
  }
