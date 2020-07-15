@@ -361,7 +361,7 @@
      Body Content
    ==================================*/
    .body-content > p:first-child::first-letter {
-     font-size: 8.4375px;
+     font-size: 8.4375rem;
      margin-top: -20px;
    }
 
