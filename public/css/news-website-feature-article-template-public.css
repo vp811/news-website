@@ -109,6 +109,7 @@
 
  #page .body-content a {
   font-family: "Gentona_Medium",sans-serif !important;
+  font-size: 1.125rem;
 }
 
  .body-content > p:first-child::first-letter {
@@ -119,7 +120,7 @@
    padding-right: .4rem;
    font-family: "Surveyor Display", serif;
    font-weight: 500;
-   font-size: 72px;
+   font-size: 4.5rem;
    text-align: left;
    color: #002346;
  }
@@ -352,10 +353,7 @@
 
    #page .article-intro .byline-date {
      font-size: 1rem;
-     font-family: "Gentona_LightItalic", sans-serif !important;
-   }
-
-   #page .article-intro .byline-date {
+     font-family: "Gentona_BookItalic", sans-serif !important;
      padding: 0 0 6.75rem;
    }
 
@@ -363,7 +361,7 @@
      Body Content
    ==================================*/
    .body-content > p:first-child::first-letter {
-     font-size: 7rem;
+     font-size: 8.4375px;
      margin-top: -20px;
    }
 
