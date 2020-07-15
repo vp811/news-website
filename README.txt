@@ -1,19 +1,27 @@
-=== Plugin Name ===
-Donate link: https://mediaservices.clas.ufl.edu
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+# News Website Plugin
+## Page Templates
+This plugin utilizes three page templates that will only load when the plugin is active.
+- Home Page Template
+  - Each section on the home page is a post (including the Submit a Story and Ytori sections). If an image for these sections needs to be changed, go to that post in the WP dashboard and change the featured image.
+  - Pulls in posts from these category slugs
+    - featured-news
+    - recent-news
+    - research-news
+    - awards-honors
+    - submit-news
+    - ytori
+- Featured Article Template
+- Article Template
 
-This plugin creates custom page templates for the News website.
+## Custom Functionality
+This plugin has some built in custom functionality:
+- Ability to share articles to Facebook, Twitter, and Linkedin
+- Ability to add a donation button after the article with custom text and link.
+- Related posts are also displayed at the bottom of an article.
 
-== Description ==
-
-This plugin was created so these custom page templates only load on the News website.
-
-== Screenshots ==
-
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
-
-== Changelog ==
+## Plugins needed
+- Advanced Custom Fields
+  - This plugin adds the custom fields that someone can fill out in the WP dashboard when looking at an individual post
+    - Sub heading
+    - Support Link
+    - Support Text
