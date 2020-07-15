@@ -42,7 +42,7 @@
 
  #page .featured_caption p {
    color: #000000;
-   font-family: "Gentona_bookItalic", sans-serif !important;
+   font-family: "Gentona_LightItalic", sans-serif !important;
    font-size: .75rem;
    margin-bottom: 1.875rem;
    display: block;
@@ -68,7 +68,7 @@
  }
 
  #page .article-intro .byline-date {
-   font-family: "Gentona_BookItalic", sans-serif !important;
+   font-family: "Gentona_LightItalic", sans-serif !important;
    line-height: 120%;
    color: #414141;
    padding: 0 0 1.875rem;
@@ -84,9 +84,13 @@
    font-family: "Surveyor Text A", "Surveyor Text B", serif !important;
    font-style: normal;
    font-weight: 400;
-   font-size: 1.125rem;
+   font-size: 1.1875rem;
    line-height: 140%;
    color: #000;
+ }
+
+ #page .body-content a {
+  font-family: "Gentona_Medium",sans-serif !important;
  }
 
  .post-template-news-article #page blockquote,
