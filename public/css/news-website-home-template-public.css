@@ -44,8 +44,7 @@
    font-weight: 500;
    color: #002346;
    font-size: 1.25rem;
-   margin-bottom:;
-   line-height: 125%;
+   line-height: 120%;
    transition: .3s;
  }
 
@@ -78,7 +77,7 @@
    font-family: 'Quadon_Bold' !important;
    color: #337AB7;
    font-size: 1.0625rem;
-   line-height: 147%;
+   line-height: 120%;
    transition: .3s;
  }
 
