@@ -82,7 +82,7 @@
  }
 
  #page .article-intro .byline-date {
-   font-family: "Gentona_BookItalic", sans-serif !important;
+   font-family: "Gentona_LightItalic", sans-serif !important;
    line-height: 120%;
    color: white;
    padding: 0 0 .75rem;
@@ -102,26 +102,33 @@
    font-family: "Surveyor Text A", "Surveyor Text B", serif !important;
    font-style: normal;
    font-weight: 400;
-   font-size: 1.125rem;
+   font-size: 1.1875rem;
    line-height: 140%;
    color: #000;
  }
 
+ #page .body-content a {
+  font-family: "Gentona_Medium",sans-serif !important;
+}
+
  .body-content > p:first-child::first-letter {
-   color: #002346;
    float: left;
    line-height: 100%;
-   font-weight: 600;
-   margin-top: 0rem;
+   margin-top: 0;
    font-size: 3rem;
    padding-right: .4rem;
+   font-family: "Surveyor Display", serif;
+   font-weight: 500;
+   font-size: 72px;
+   text-align: left;
+   color: #002346;
  }
 
  .post-template-news-feature-article #page blockquote,
  .post-template-news-feature-article #page blockquote p {
    padding: 0;
    margin: 1.875rem 0;
-   font-family: "Quadon_BoldItalic",Arial,sans-serif !important;
+   font-family: "Quadon_UltraBoldItalic",Arial,sans-serif !important;
    color: #C2510A;
    line-height: 140%;
    font-size: 1.375rem;
