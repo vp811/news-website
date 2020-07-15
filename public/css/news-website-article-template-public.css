@@ -91,6 +91,7 @@
 
  #page .body-content a {
   font-family: "Gentona_Medium",sans-serif !important;
+  font-size: 1.125rem;
  }
 
  .post-template-news-article #page blockquote,
@@ -324,7 +325,7 @@
 
    #page .article-intro .byline-date {
      font-size: .875rem;
-     font-family: "Gentona_LightItalic", sans-serif !important;
+     font-family: "Gentona_BookItalic", sans-serif !important;
      padding: 0 0 3rem;
    }
 
