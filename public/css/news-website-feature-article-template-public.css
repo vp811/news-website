@@ -373,6 +373,13 @@
      margin-top: -20px;
    }
 
+   @-moz-document url-prefix() {
+     .body-content > p:first-child::first-letter {
+         font-size: 8.4375rem;
+         margin-top: 14px;
+     }
+    }
+
    .featured_caption {
      color: white;
      font-family: "Gentona_LightItalic", sans-serif;
