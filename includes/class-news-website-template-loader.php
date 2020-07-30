@@ -260,8 +260,8 @@ class clasNewsPageTemplates {
 	 * Checks if the template is assigned to the page
 	 */
 	public function view_project_template( $template ) {
-		// Return the search template if we're searching (instead of the template for the first result)
-		if ( is_search() ) {
+		// Return the search or achive template if we're searching (instead of the template for the first result)
+		if ( is_search() || is_archive() ) {
 			return $template;
 		}
 
