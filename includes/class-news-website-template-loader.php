@@ -562,3 +562,80 @@ function custom_posts_per_page( $query ) {
 add_action( 'pre_get_posts', 'custom_posts_per_page' );
 
 
+
+/*========================================
+
+	Customizer Options
+
+=========================================*/
+
+function news_customizer_options( $wp_customize ) {
+	// Add a Theme Option panel for backwards compatibility
+	$wp_customize->add_panel( 'news_options', array(
+		'title' => __('News Website Options', 'ufclas-emily'),
+		'description' => __('Options for modifying the theme.', 'ufclas-emily'),
+		'priority' => '129',
+	));
+
+	// Adds subfooter options to customizer
+	$wp_customize->add_section( 'theme_options_sub_footer', array(
+		'title' => __('Sub Footer', 'ufclas-emily'),
+		'description' => __('This section will show up right before the main CLAS footer', 'ufclas-emily'),
+		'panel' => 'news_options',
+	));
+
+	$wp_customize->add_setting( 'heading_subfooter', array( 'default' => '' ));
+	$wp_customize->add_setting( 'fb_subfooter', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'twitter_subfooter', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'instagram_subfooter', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'linkedin_subfooter', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+	$wp_customize->add_setting( 'newsletter_cta_subfooter', array( 'default' => '' ));
+	$wp_customize->add_setting( 'newsletter_subfooter', array( 'default' => '', 'sanitize_callback' => 'esc_url_raw' ));
+
+	$wp_customize->add_control( 'heading_subfooter', array(
+		'label' => __('Social Media Text', 'ufclas-emily'),
+		'description' => __("", 'ufclas-emily'),
+		'section' => 'theme_options_sub_footer',
+		'type' => 'textarea',
+	));
+	$wp_customize->add_control( 'fb_subfooter', array(
+		'label' => __('Facebook URL', 'ufclas-emily'),
+		'description' => __("", 'ufclas-emily'),
+		'section' => 'theme_options_sub_footer',
+		'type' => 'text',
+	));
+	$wp_customize->add_control( 'twitter_subfooter', array(
+		'label' => __('Twitter URL', 'ufclas-emily'),
+		'description' => __("", 'ufclas-emily'),
+		'section' => 'theme_options_sub_footer',
+		'type' => 'text',
+	));
+	$wp_customize->add_control( 'instagram_subfooter', array(
+		'label' => __('Instagram URL', 'ufclas-emily'),
+		'description' => __("", 'ufclas-emily'),
+		'section' => 'theme_options_sub_footer',
+		'type' => 'text',
+	));
+	$wp_customize->add_control( 'linkedin_subfooter', array(
+		'label' => __('LinkedIn URL', 'ufclas-emily'),
+		'description' => __("", 'ufclas-emily'),
+		'section' => 'theme_options_sub_footer',
+		'type' => 'text',
+	));
+	$wp_customize->add_control( 'newsletter_cta_subfooter', array(
+		'label' => __('Newsletter CTA', 'ufclas-emily'),
+		'description' => __("", 'ufclas-emily'),
+		'section' => 'theme_options_sub_footer',
+		'type' => 'textarea',
+	));
+	$wp_customize->add_control( 'newsletter_subfooter', array(
+		'label' => __('Newsletter URL', 'ufclas-emily'),
+		'description' => __("", 'ufclas-emily'),
+		'section' => 'theme_options_sub_footer',
+		'type' => 'text',
+	));
+}
+
+add_action('customize_register','news_customizer_options');
+
+
