@@ -520,7 +520,7 @@ function socialMedia(){
 						<p><a target="_blank" class="share-button share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $postUrl; ?>" title="Share on Facebook"><i class="fab fa-facebook-square"></i></a></p>
 
 						<!-- Twitter Link -->
-						<p><a target="_blank" class="share-button share-twitter" href="https://twitter.com/intent/tweet?url=<?php echo $postUrl; ?>&text=<?php echo the_title(); ?>&via=<?php the_author_meta( 'twitter' ); ?>" title="Share on Twitter"><i class="fab fa-twitter-square"></i></i></a></p>
+						<p><a target="_blank" class="share-button share-twitter" href="https://twitter.com/intent/tweet?url=<?php echo $postUrl; ?>&text=<?php echo the_title(); ?>&via=<?php the_author_meta( 'twitter' ); ?>" title="Share on Twitter"><i class="fab fa-twitter"></i></i></a></p>
 
 						<!-- LinkedIn -->
 						<p><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $postUrl; ?>&title=<?php echo get_the_title(); ?>"><i class="fab fa-linkedin"></i></a></p>
