@@ -100,7 +100,7 @@ class News_Website_Template_Public {
 		wp_register_script('font-awesome', 'https://kit.fontawesome.com/a076d05399.js',null, null, true);
 		wp_enqueue_script('font-awesome');
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/news-website-template-public.js', array( 'jquery' ), $this->version, false );
+		//wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/news-website-template-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 
