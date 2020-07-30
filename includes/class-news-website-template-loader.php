@@ -201,18 +201,18 @@ class clasNewsPageTemplates {
 
 		// Add your templates to this array.
 		$this->templates = array(
-			'../templates/news-article.php' => 'News Article',
-			'../templates/news-feature-article.php' => 'News Feature Article',
-			'../templates/news-home-page.php' => 'News Home Page'
+			'../public/templates/news-article.php' => 'News Article',
+			'../public/templates/news-feature-article.php' => 'News Feature Article',
+			'../public/templates/news-home-page.php' => 'News Home Page'
 		);
 
-		function tfc_remove_page_templates( $templates ) {
+		function news_remove_page_templates( $templates ) {
 	    unset( $templates['single-magazine-article.php'] );
 			unset( $templates['page-clas-home.php'] );
 	    return $templates;
 		}
 
-		add_filter( 'theme_page_templates', 'tfc_remove_page_templates' );
+		add_filter( 'theme_page_templates', 'news_remove_page_templates' );
 
 	}
 
