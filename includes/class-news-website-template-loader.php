@@ -532,3 +532,33 @@ function socialMedia(){
 		</section>
 	</div><!-- Wrap -->
 <?php }
+
+/*========================================
+
+	New Archive Page
+
+=========================================*/
+function clasNewsArchiveTemplate( $template ) {
+    // If the current url is an archive of any kind
+    if( is_archive() ) {
+        // Set this to the template file inside your plugin folder
+        $template = ABSPATH . 'wp-content/plugins/news-website-template/public/templates/archive.php';
+    }
+    // Always return, even if we didn't change anything
+    return $template;
+}
+
+add_filter( 'archive_template', 'clasNewsArchiveTemplate' );
+
+
+
+
+function custom_posts_per_page( $query ) {
+
+    if ( $query->is_archive() || $query->is_category() ) {
+        set_query_var('posts_per_page', 12);
+    }
+}
+add_action( 'pre_get_posts', 'custom_posts_per_page' );
+
+
