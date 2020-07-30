@@ -73,20 +73,9 @@ class News_Website_Template_Public {
 		 * class.
 		 */
 
-		//If the page template is the Featured Article, this CSS will load
- 	 	if ( is_page_template( '../templates/news-feature-article.php' ) ) {
-			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/news-website-feature-article-template-public.css', array(), $this->version, 'all' );
-		}
+		//Main stylesheet for the plugin
+			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/news-website-public.min.css', array(), $this->version, 'all' );
 
-		//If the page template is the News Article, this CSS will load
-		if ( is_page_template( '../templates/news-article.php' ) ) {
-			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/news-website-article-template-public.css', array(), $this->version, 'all' );
-		}
-
-		//If the page template is the home page, this CSS will load
-		if ( is_page_template( '../templates/news-home-page.php' ) ) {
-			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/news-website-home-template-public.css', array(), $this->version, 'all' );
-		}
 	}
 
 	/**
