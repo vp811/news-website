@@ -639,3 +639,59 @@ function news_customizer_options( $wp_customize ) {
 add_action('customize_register','news_customizer_options');
 
 
+
+/*=======================================
+
+	Adds subfooter before main footer
+
+=========================================*/
+function newsSubFooter() { ?>
+	</div>
+	<div class="sub-footer">
+		<div class="social-media-accounts">
+			<?php
+			//Text before social media icons in subfooter
+			if ( !empty(get_theme_mod('heading_subfooter')) ){ ?>
+				<p><?php echo get_theme_mod('heading_subfooter'); ?></p>
+			<?php } ?>
+
+			<div class="social-media-icons">
+				<?php
+					//Facebook Icon
+					if ( !empty(get_theme_mod('fb_subfooter')) ){ ?>
+						<p><a target="_blank" class="follow facebook" href="<?php echo esc_url(get_theme_mod('fb_subfooter')); ?>" title="Follow CLAS on Facebook"><i class="fab fa-facebook-square"></i></a></p>
+					<?php }
+
+					//Instagram Icon
+					if ( !empty(get_theme_mod('instagram_subfooter')) ){ ?>
+						<p><a target="_blank" class="follow instagram" href="<?php echo esc_url(get_theme_mod('instagram_subfooter')); ?>" title="Follow CLAS on Instagram"><i class="fab fa-instagram"></i></a></p>
+					<?php }
+
+					//Twitter Icon
+					if ( !empty(get_theme_mod('twitter_subfooter')) ){ ?>
+						<p><a target="_blank" class="follow twitter" href="<?php echo esc_url(get_theme_mod('twitter_subfooter')); ?>" title="Follow CLAS on Twitter"><i class="fab fa-twitter"></i></a></p>
+					<?php }
+
+					//LinkedIn Icon
+					if ( !empty(get_theme_mod('linkedin_subfooter')) ){ ?>
+						<p><a target="_blank" class="follow linkedin" href="<?php echo esc_url(get_theme_mod('linkedin_subfooter')); ?>" title="Follow CLAS on LinkedIn"><i class="fab fa-linkedin"></i></a></p>
+					<?php } ?>
+				</div>
+		</div>
+		<div class="newsletter">
+			<?php
+				//Newsletter Button
+				if ( !empty(get_theme_mod('newsletter_subfooter')) ){ ?>
+					<p class="follow newsletter"><a target="_blank"  href="<?php echo esc_url(get_theme_mod('newsletter_subfooter')); ?>">Subscribe to Newsletter</a></p>
+				<?php }
+
+				//Newsletter Call to Action
+				if ( !empty(get_theme_mod('newsletter_cta_subfooter')) ){ ?>
+					<p><?php echo get_theme_mod('newsletter_cta_subfooter'); ?></p>
+				<?php } ?>
+			</div>
+	</div>
+<?php
+}
+
+add_action('get_footer', 'newsSubFooter');
