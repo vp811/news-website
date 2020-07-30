@@ -416,59 +416,58 @@ if(function_exists('acf_add_local_field_group')){
 	Related Posts
 
 =========================================*/
-	function relatedPosts(){
-		?>
-		<div class="wrap related-posts">
-			<section class="relatedposts">
-				<h3>You Might Also Like</h3>
-				<div class="relatedposts-container">
-					<?php
-						global $post;
-						$tags = wp_get_post_tags($post->ID);
+function relatedPosts(){
+		global $post;
+		$tags = wp_get_post_tags($post->ID);
 
-						//Gets arguments for Related Posts Query
-						if ($tags) {
-							$tag_ids = array();
-							foreach($tags as $individual_tag){
-								$tag_ids[] = $individual_tag->term_id;
+		//Gets arguments for Related Posts Query
+		if ($tags) {
+			$tag_ids = array();
+			foreach($tags as $individual_tag){
+				$tag_ids[] = $individual_tag->term_id;
 
-								$args=array(
-									'tag__in' => $tag_ids,
-									'post__not_in' => array($post->ID),
-									'posts_per_page'=>3, // Number of related posts to display.
-									'ignore_sticky_posts'=>1,
-									'orderby' => 'rand'
-								);
-							}
+				$args=array(
+					'tag__in' => $tag_ids,
+					'post__not_in' => array($post->ID),
+					'posts_per_page'=>3, // Number of related posts to display.
+					'ignore_sticky_posts'=>1,
+					'orderby' => 'rand'
+				);
+			}
 
-							$my_query = new wp_query( $args );
+			$my_query = new wp_query( $args ); ?>
 
-							while( $my_query->have_posts() ) {
-								$my_query->the_post();
-							?>
+			<div class="wrap related-posts">
+				<section class="relatedposts">
+					<h3>You Might Also Like</h3>
 
-							<div class="relatedthumb">
-								<a rel="external" href="<?php the_permalink(); ?>">
-								<div class="related-post-featured-image">
-									<?php the_post_thumbnail('thumbnail'); ?>
-								</div>
-								<div class="related-post-title-excerpt">
-									<h4><?php echo get_the_title(); ?></h4>
-									<p><?php echo get_the_excerpt(); ?></p>
-								</div>
-								</a>
-							</div>
+					<div class="relatedposts-container"><?php
 
-						<?php }
-						}
-						wp_reset_query();
+						while( $my_query->have_posts() ) {
+							$my_query->the_post();
 						?>
-					</div> <!-- relatedposts-container -->
-			</section>
-		</div> <!-- Wrap -->
-		<?php
-	}
 
+						<div class="relatedthumb">
+							<a rel="external" href="<?php the_permalink(); ?>">
+							<div class="related-post-featured-image">
+								<?php the_post_thumbnail('thumbnail'); ?>
+							</div>
+							<div class="related-post-title-excerpt">
+								<h4><?php echo get_the_title(); ?></h4>
+								<p><?php echo get_the_excerpt(); ?></p>
+							</div>
+							</a>
+						</div>
+
+			<?php }
+			}
+			wp_reset_query();
+		?>
+					</div> <!-- relatedposts-container -->
+				</section>
+			</div> <!-- Wrap -->
+	<?php
+}
 /*========================================
 
 	Support Department Link/Text
