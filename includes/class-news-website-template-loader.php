@@ -384,6 +384,31 @@ if(function_exists('acf_add_local_field_group')){
 		'position' => 'acf_after_title',
 		'style' => 'seamless',
 	));
+
+	//Adds the Featured Images to categories
+	acf_add_local_field_group(array(
+		'key' => 'cat_featured',
+		'title' => 'Category Featured Image',
+		'fields' => array (
+			array (
+				'key' => 'category_image',
+				'label' => 'Category Image',
+				'instructions' => 'Select an image for this category',
+				'name' => 'cats_image',
+				'type' => 'image',
+			)
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'taxonomy',
+					'operator' => '==',
+					'value' => 'category'
+				),
+			),
+		),
+		'style' => 'seamless',
+	));
 }
 
 /*========================================
