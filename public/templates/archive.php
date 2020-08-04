@@ -13,11 +13,20 @@
 
       <div class="recent-news-section">
         <?php
+
+        //Variable to see if post is first in the query
+        $i = 0;
+
         // The Loop
         if (have_posts() ) {
           while (have_posts() ) {
-            the_post(); ?>
-            <div class="recent-individual-news">
+            the_post();
+              //Counter so class "first-news" gets added to only the first post in the archive query
+              $i++;
+              $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            ?>
+
+            <div class="recent-individual-news <?php if($i == 1 && $paged == 1){ echo 'first-news'; } ?>">
               <div class="news-left-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail',  array( 'class' => 'img-responsive' )); ?></a></div>
               <div class="news-right-text">
                 <h3 class="news-h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
