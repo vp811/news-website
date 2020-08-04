@@ -9,7 +9,7 @@
 <!-- Featured News -->
   <section class="featured-news-section">
     <div class="container">
-  	   <h2 class="news-h2">Featured</h2>
+  	   <h2 class="category-title">Featured</h2>
      </div>
       	<?php
       		$query_args = array(
@@ -48,7 +48,7 @@
 <div class="news-and-honors-container">
   <section class="recent-news">
     <!-- Recent news -->
-    <h2 class="news-h2">Recent</h2>
+    <h2 class="category-title">Recent</h2>
     <div class="recent-news-section">
     	<?php $query_args = array(
     		'post_type' => 'post',
@@ -94,7 +94,7 @@
   <div class="home-bottom-container">
     <!-- Research news -->
     <section class="research-news-section">
-    	<h2 class="news-h2">Research</h2>
+    	<h2 class="category-title">Research</h2>
     	<?php $query_args = array(
     		'post_type' => 'post',
     		'post_status' => 'publish',
@@ -133,7 +133,7 @@
     <div class="awards-submit-ytori-container">
       <!-- Awards and Honors -->
       <section class="awards-news-section">
-      	<h2 class="news-h2">Awards & Honors</h2>
+      	<h2 class="category-title">Awards & Honors</h2>
       	<?php $query_args = array(
       		'post_type' => 'post',
       		'post_status' => 'publish',
@@ -222,7 +222,7 @@
           <section class="ytori-current-issue-container">
 
             <div class="ytori-current-issue">
-               <h2 class="news-h2">Ytori Magazine</h2>
+               <h2 class="category-title">Ytori Magazine</h2>
                <div class="ytori-text-image">
                  <p class="ytoriexcerpt-p"><?php echo get_the_excerpt(); ?></p>
                  <p class="ytori-current-issue-link"><a href="<?php echo get_the_permalink(); ?>"><?php the_post_thumbnail('portrait-crop'); ?></a></p>
