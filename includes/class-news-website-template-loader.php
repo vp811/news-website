@@ -540,7 +540,7 @@ function socialMedia(){
 =========================================*/
 function clasNewsArchiveTemplate( $template ) {
     // If the current url is an archive of any kind
-    if( is_archive() ) {
+    if( is_category(array('recent-news', 'research-news', 'awards-honors')) ) {
         // Set this to the template file inside your plugin folder
         $template = ABSPATH . 'wp-content/plugins/news-website-template/public/templates/archive.php';
     }
@@ -555,9 +555,18 @@ add_filter( 'archive_template', 'clasNewsArchiveTemplate' );
 
 function custom_posts_per_page( $query ) {
 
-    if ( $query->is_archive() || $query->is_category() ) {
-        set_query_var('posts_per_page', 12);
+		//Stores the page number you're on
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+		//Shows 13 post on the fist page of an archive page
+    if ( ($query->is_archive() || $query->is_category()) && $paged == 1 ) {
+        set_query_var('posts_per_page', 13);
     }
+
+		//Shows 12 post on the fist page of an archive page
+		if (($query->is_archive() || $query->is_category()) && $paged != 1){
+				set_query_var('posts_per_page', 12);
+		}
 }
 add_action( 'pre_get_posts', 'custom_posts_per_page' );
 
