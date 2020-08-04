@@ -7,26 +7,9 @@
   $image = get_field('category_image', $term);
 ?>
 
-<!-- Featured Image -->
-<div class="archive-hero-image">
-  <img src="<?php echo $image['url']; ?>"  alt="<?php echo esc_attr($image['alt']); ?>" />
-
-  <div class="category-intro">
-    <!-- Category Title -->
-    <h2 class="category-title"><?php single_cat_title(); ?></h2>
-
-    <!-- Displays image caption if there is one -->
-    <?php
-      $get_description = esc_attr($image['description']);
-
-      if(!empty($get_description)){//If description is not empty show the div
-        echo '<div class="category-caption">' . $get_description . '</div>';
-      }
-    ?>
-  </div>
-</div>
   <main class="archive-container">
     <section class="recent-news">
+      <h2 class="category-title"><?php single_cat_title(); ?></h2>
 
       <div class="recent-news-section">
         <?php
