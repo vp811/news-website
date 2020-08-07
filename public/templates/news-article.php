@@ -19,13 +19,24 @@
           $publishDate     = get_the_date();
           ?>
           <div class="news-article top-section">
-            <?php the_post_thumbnail();
 
-            // Displays image caption if there is one
-              $get_description = get_post(get_post_thumbnail_id())->post_excerpt;
+            <?php
 
-              if(!empty($get_description)){//If description is not empty show the div
-                echo '<div class="featured_caption"><p>' . $get_description . '</p></div>';
+              //Variable that checks to see if user selected featured image to be hidden in article
+              $hide = get_post_meta( get_the_ID(), 'ufclas_featured_image_display', true );
+
+
+              //If checkbox is not checked, display image
+              if($hide != true){
+                //Display Featured Image
+                the_post_thumbnail();
+
+                // Displays image caption if there is one
+                  $get_description = get_post(get_post_thumbnail_id())->post_excerpt;
+
+                if(!empty($get_description)){//If description is not empty show the div
+                  echo '<div class="featured_caption"><p>' . $get_description . '</p></div>';
+                }
               }
             ?>
           </div>
