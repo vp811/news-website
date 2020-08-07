@@ -270,6 +270,10 @@
   font-size: 1rem;
 }
 
+.wrap.no-image {
+    padding-top: 3rem;
+}
+
 .name-highlight,
 p .orangetxt-capitalize {
   color: #C2510A;
