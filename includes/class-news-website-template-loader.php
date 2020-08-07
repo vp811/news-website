@@ -691,7 +691,27 @@ function newsSubFooter() { ?>
 			<?php
 				//Newsletter Button
 				if ( !empty(get_theme_mod('newsletter_subfooter')) ){ ?>
-					<p class="follow newsletter"><a target="_blank"  href="<?php echo esc_url(get_theme_mod('newsletter_subfooter')); ?>">Subscribe to Newsletter</a></p>
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog-centered" role="document">
+					    <div class="modal-content">
+					      <div class="modal-body">
+									<button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<iframe src="https://app.e2ma.net/app2/audience/signup/1928037/1764318/" width="810" height="800"frameborder="0"></iframe>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+					<script type="text/javascript">
+						jQuery($('#exampleModal').on('shown.bs.modal', function () {
+							$('#myInput').trigger('focus')
+						}))
+					</script>
+
+					<p class="follow newsletter"><a target="_blank" id="myInput" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"  href="<?php echo esc_url(get_theme_mod('newsletter_subfooter')); ?>">Subscribe to Newsletter</a></p>
 				<?php }
 
 				//Newsletter Call to Action
