@@ -24,16 +24,28 @@
             <div class="article-intro">
               <h2><?php echo get_the_title(); ?></h2>
 
-              <!-- Displays subheading if one is set -->
-              <?php if(!empty(get_field('subheading'))){
+              <?php
+              //Displays subheading if one is set
+              if(!empty(get_field('subheading'))){
                 echo "<p class='sub-heading'>" . get_field('subheading') . "</p>";
               } ?>
 
-              <!-- Displays author's first name and last name and the publish date -->
-              <p class="byline-date"><?php echo "By <span class='author-name'>$authorFirstName $authorLastName</span> — <span class='publish-date'>$publishDate</span>";?></p>
-
-              <!-- Displays image caption if there is one -->
               <?php
+                //Displays author's first name and last name and the publish date
+
+                //Checks to see if author needs to hidden
+                $hidden = get_field('article-author');
+
+                $author = "By <span class='author-name'>$authorFirstName $authorLastName</span> —";
+                $date   = "<span class='publish-date'>$publishDate</span>";
+                
+                if( in_array('hide-author', $hidden) == false ) {
+                  echo "<p class='byline-date'> $author $date</p>";
+                }else{
+                  echo "<p class='byline-date'>$date</p>";
+                }
+
+                //Displays image caption if there is one
                 $get_description = get_post(get_post_thumbnail_id())->post_excerpt;
 
                 if(!empty($get_description)){//If description is not empty show the div

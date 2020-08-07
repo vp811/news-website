@@ -19,15 +19,14 @@
           $publishDate     = get_the_date();
           ?>
           <div class="news-article top-section">
-
             <?php
+              //Displays author's first name and last name and the publish date
 
-              //Variable that checks to see if user selected featured image to be hidden in article
-              $hide = get_post_meta( get_the_ID(), 'ufclas_featured_image_display', true );
+              //Checks to see if author needs to hidden
+              $hidden  = get_field('featured-image');
 
+              if( in_array('hide-image', $hidden) == false ) {
 
-              //If checkbox is not checked, display image
-              if($hide != true){
                 //Display Featured Image
                 the_post_thumbnail();
 
@@ -37,20 +36,36 @@
                 if(!empty($get_description)){//If description is not empty show the div
                   echo '<div class="featured_caption"><p>' . $get_description . '</p></div>';
                 }
+              }else{
+                $noimage =  "no-image";
               }
             ?>
           </div>
-            <div class="wrap">
+            <div class="wrap <?php echo $noimage; ?>">
               <div class="article-intro">
                 <h2><?php echo get_the_title(); ?></h2>
 
-                <!-- Displays subheading if one is set -->
-                <?php if(!empty(get_field('subheading'))){
+                <?php
+                //Displays subheading if one is set
+                if(!empty(get_field('subheading'))){
                   echo "<p class='sub-heading'>" . get_field('subheading') . "</p>";
                 } ?>
 
-                <!-- Displays author's first name and last name and the publish date -->
-                <p class="byline-date"><?php echo "By <span class='author-name'>$authorFirstName $authorLastName</span> — <span class='publish-date'>$publishDate</span>";?></p>
+                <?php
+                  //Displays author's first name and last name and the publish date
+
+                  //Checks to see if author needs to hidden
+                  $hidden = get_field('article-author');
+
+                  $author = "By <span class='author-name'>$authorFirstName $authorLastName</span> —";
+                  $date   = "<span class='publish-date'>$publishDate</span>";
+
+                  if( in_array('hide-author', $hidden) == false ) {
+                    echo "<p class='byline-date'> $author $date</p>";
+                  }else{
+                    echo "<p class='byline-date'>$date</p>";
+                  }
+                ?>
               </div>
 
 
