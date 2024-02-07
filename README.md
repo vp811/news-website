@@ -1,4 +1,5 @@
 # News Website Plugin | 1.0.0
+
 ## Page Templates
 This plugin utilizes three page templates that will only load when the plugin is active.
 - Home Page Template
